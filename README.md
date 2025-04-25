@@ -2,6 +2,9 @@
 ### Project Overview
 
 This project analyzes demographics data for Arvato Financial Services to identify which segments of the population are most likely to become customers. Using unsupervised and supervised learning techniques, I created customer segmentation models and a predictive classifier to optimize marketing campaign targeting.
+
+[Blog post link: Demystifying Customer Data for Arvato Financial Services](https://medium.com/@emmaezenwere/introduction-demystifying-customer-data-for-arvato-financial-services-497fc3cf7086)
+
 Key Components
 
 Data Cleaning & Preprocessing: 
