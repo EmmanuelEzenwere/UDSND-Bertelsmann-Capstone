@@ -9,6 +9,17 @@ This project analyzes demographics data for Arvato Financial Services to identif
 
 #### Data Cleaning & Preprocessing: 
 - Implemented a structured two-stage cleaning approach to handle extensive missing data in the raw datasets.
+
+#### Visualization
+-  General population and customer demographic data were plotted using histogram and barcharts for deeper insight on the data.
+
+
+#### Transformation
+- A transformation pipeline was applied to uniformly clean and apply feature engineering steps to each dataset. This ensures that any downstream analyses, particularly clustering or supervised modeling, are based on directly comparable inputs.
+
+
+
+#### Modelling
 - Unsupervised Learning: Used K-means clustering and PCA to identify three distinct customer segments.
 - Demographic Analysis: Discovered key characteristics of each segment, including age, financial behavior, and family status.
 - Supervised Learning: Built a Random Forest classifier to predict which individuals are most likely to respond to marketing campaigns.
@@ -16,13 +27,13 @@ This project analyzes demographics data for Arvato Financial Services to identif
 
 #### Evaluate Model
 
-The model’s performance is evaluated using two primary metrics: Accuracy and F-Score.
+- The model’s performance is evaluated using two primary metrics: Accuracy and F-Score.
 
-Accuracy: This metric is used to determine the proportion of correct predictions made by the model. It is a straightforward measure. The accuracy score is calculated by comparing the predicted values (y_val_pred) against the true values (y_val_split). 
+- Accuracy: This metric is used to determine the proportion of correct predictions made by the model. It is a straightforward measure. The accuracy score is calculated by comparing the predicted values (y_val_pred) against the true values (y_val_split). 
 
-F-Score (or F1-Score): The F-Score is particularly useful when dealing with imbalanced datasets. It is the harmonic mean of precision and recall, balancing the trade-off between them. It provides a more nuanced measure of a model’s performance in classifying minority classes, which can be crucial in real-world applications where the cost of false negatives or false positives can vary.
+- F-Score (or F1-Score): The F-Score is particularly useful when dealing with imbalanced datasets. It is the harmonic mean of precision and recall, balancing the trade-off between them. It provides a more nuanced measure of a model’s performance in classifying minority classes, which can be crucial in real-world applications where the cost of false negatives or false positives can vary.
 
-The classification_report provides a comprehensive view of these metrics, including precision, recall, and F1-score for each class, along with the overall accuracy.
+- The classification_report provides a comprehensive view of these metrics, including precision, recall, and F1-score for each class, along with the overall accuracy.
 
 
 
