@@ -25,15 +25,34 @@ This project analyzes demographics data for Arvato Financial Services to identif
 - Supervised Learning: Built a Random Forest classifier to predict which individuals are most likely to respond to marketing campaigns.
 - Feature Enhancement: Added cluster membership as a feature to improve predictive performance.
 
-#### Evaluate Model
+#### Model Evaluation & Justification 
 
-- The model’s performance is evaluated using two primary metrics: Accuracy and F-Score.
+- Given the binary nature of the classification problem—predicting whether a person is likely to be a customer Accuracy and F1-Score were chosen to evaluate the performance of the model.
 
-- Accuracy: This metric is used to determine the proportion of correct predictions made by the model. It is a straightforward measure. The accuracy score is calculated by comparing the predicted values (y_val_pred) against the true values (y_val_split). 
+ 
+ - Accuracy: Measures the overall proportion of correct predictions. It is particulary useful when:
+- -  classes are relatively balanced in the dataset but may be misleading with imbalanced classes.
+- - The cost of misclassification is similar across different customer classes.
 
-- F-Score (or F1-Score): The F-Score is particularly useful when dealing with imbalanced datasets. It is the harmonic mean of precision and recall, balancing the trade-off between them. It provides a more nuanced measure of a model’s performance in classifying minority classes, which can be crucial in real-world applications where the cost of false negatives or false positives can vary.
+- - For our model it answers the question, what percentage of customers did we classify correctly?.
 
-- The classification_report provides a comprehensive view of these metrics, including precision, recall, and F1-score for each class, along with the overall accuracy.
+- The accuracy score is calculated by comparing the predicted values (y_val_pred) against the true values (y_val_split). 
+
+- F1-Score: This harmonic mean of precision and recall is more appropriate when :
+	- Classes are imbalanced as is the case with our data (more non-customers than customers)
+    - A balance is needed between false positives and false negatives
+    - Different types of errors have different business impacts.
+
+- The F1 score is calculated as follows:
+F1 Score = 2 * (Precision * Recall) / (Precision + Recall)
+
+- The model’s performance is evaluated using these two primary metrics, Accuracy and F-Score.
+
+- Using both metrics together provides a more comprehensive evaluation of our classification model. Giving insight on whether it succeeds and where it needs improvements.
+
+
+- Scikit Learn's classification_report function provides a comprehensive view of these metrics, including precision, recall, and F1-score for each class, along with the overall accuracy.
+
 
 
 
